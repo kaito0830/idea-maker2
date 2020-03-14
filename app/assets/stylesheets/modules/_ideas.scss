@@ -1,0 +1,121 @@
+*{
+  box-sizing: border-box;
+}
+
+.html{
+  background-image: url(https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
+  background-size: cover;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  width: 100vw;
+  background-color: rgba(0,0,0,0);
+  font-family:Meiryo;
+  font-weight: 300;
+  color: white;
+  border-bottom: 2px solid rgba(119, 119, 233, 0.7);
+  &--logo{
+    a{
+      margin-left: 20px;
+      font-size:70px;
+      -webkit-text-stroke: 1px blue;
+      text-decoration: none;
+      color: white;
+    }
+  }
+  &--btn{
+    display: flex;
+    line-height: 100px;
+    &--logout{
+      display: flex;
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    }
+    &--icon{
+      padding-right: 30px;
+      border-left: 0.1px solid;
+      padding-left: 20px;
+      width: 100px;
+      text-align: center;
+      font-size: 30px;
+    }
+  }
+}
+.header-search{
+  height: 50px;
+  color: white;
+  border-bottom: 1px solid pink;
+}
+// ヘッダーの一つ一つのボタン
+.btn{
+  padding: 10px;
+  display: block;
+  border-left: 0.1px solid ;
+  width: 100px;
+  text-align: center;
+}
+
+.btn:hover{
+  background-color:rgba(0, 0, 255, 0.3);
+  transition: all 1s;
+}
+// ログアウトボタン
+.logout{
+  color: black;
+  font-size: 15px;
+  
+}
+// 投稿ボタン
+.post{
+  font-size: 20px;
+}
+
+
+
+.body{
+  width: 100vw;
+  height: calc(100vh - 100px);
+  a{
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.idea{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color:#fff;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  border-bottom: 1px dotted rgb(233, 155, 168);
+  a{
+    text-decoration: none;
+  }
+  &--title{
+    margin-left: 200px;
+    font-size: 30px;
+  }
+  &--info{
+    display: flex;
+    &--user_name{
+      margin-right: 20px;
+      font-size: 20px;
+    }
+    &--price{
+      margin-right: 20px;
+      font-size: 20px;
+    }
+  } 
+}
+
+.idea:hover{
+  background-color:rgba(0, 0, 255, 0.3);
+  transition: all 0.5s;
+}

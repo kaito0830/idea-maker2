@@ -1,0 +1,11 @@
+.content
+  =render "header"
+
+  .form
+    .form--logo
+    =form_for @idea do |f|
+      =f.text_field :title, class:"form--title", placeholder:"タイトル"
+      .form--box
+      =f.text_area :info, class:"form--info", placeholder:"あなたのアイデアを教えてください"
+      =f.number_field :price, class:"form--price", min:1
+      =f.submit "Send", class:"form--btn"
