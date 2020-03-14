@@ -1,0 +1,14 @@
+.header
+  .header--logo
+    %a(href="/")
+      Idea-Maker
+  .header--btn
+    .header--btn--logout
+      %a(href="#"class="btn logout")
+        ログアウト
+      .btn
+      = link_to new_idea_path do
+        投稿
+        -# ラベル化してアイコンをボタン化する必要あり
+    .header--btn--icon
+      =icon("fas", "cog")

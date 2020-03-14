@@ -1,0 +1,18 @@
+.html
+  = render "header"
+  .header-search
+    検索
+  .body
+    -# ideaのブロックでひとかたまりのアイデア
+    -@ideas.each do |idea|
+      %a(href="/ideas/#{idea.id}" class="idea")
+        .idea--title
+          = idea.title
+          -# idea-infoでユーザ名と値段の情報を持つ
+        .idea--info 
+          .idea--info--user_name
+            kaito
+          .idea--info--price
+            price: $
+            = idea.price
+    %end
