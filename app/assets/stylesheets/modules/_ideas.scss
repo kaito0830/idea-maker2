@@ -44,6 +44,22 @@
       text-align: center;
       font-size: 30px;
     }
+    &--login{
+      a{
+        height: 90px;
+        text-decoration: none;
+        color: white;
+        line-height: 100px;
+      }
+    }
+    &--new{
+      a{
+        height: 90px;
+        text-decoration: none;
+        color: white;
+        line-height: 100px;
+      }
+    }
   }
 }
 .header-search{
@@ -68,12 +84,13 @@
 .logout{
   color: black;
   font-size: 15px;
-  
 }
 // 投稿ボタン
 .post{
   font-size: 20px;
 }
+
+
 
 
 

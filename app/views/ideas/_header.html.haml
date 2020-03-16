@@ -3,12 +3,17 @@
     %a(href="/")
       Idea-Maker
   .header--btn
+  -if user_signed_in?
     .header--btn--logout
-      %a(href="#"class="btn logout")
-        ログアウト
-      .btn
-      = link_to new_idea_path do
-        投稿
-        -# ラベル化してアイコンをボタン化する必要あり
+      = link_to "ログアウト", destroy_user_session_path ,class:"btn logout", method: :delete
+    .btn
+    = link_to new_idea_path do
+      投稿
     .header--btn--icon
       =icon("fas", "cog")
+  -else
+    .header--btn--login
+      = link_to "ログイン", new_user_session_path, class:"btn login"
+    .header--btn--new
+      = link_to "新規登録" , new_user_registration_path, class:"btn registration"
+      

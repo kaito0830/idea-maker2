@@ -5,7 +5,18 @@
   .body
     -# ideaのブロックでひとかたまりのアイデア
     -@ideas.each do |idea|
-      %a(href="/ideas/#{idea.id}" class="idea")
+      -if user_signed_in? 
+        %a(href="/ideas/#{idea.id}" class="idea")
+          .idea--title
+            = idea.title
+            -# idea-infoでユーザ名と値段の情報を持つ
+          .idea--info 
+            .idea--info--user_name
+              = idea.user.name
+            .idea--info--price
+              price: $
+              = idea.price
+      -else
         .idea--title
           = idea.title
           -# idea-infoでユーザ名と値段の情報を持つ

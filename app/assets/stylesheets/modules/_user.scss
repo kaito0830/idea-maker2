@@ -1,0 +1,38 @@
+
+
+h1{
+  font-size: 70px;
+  font-weight: 100;
+  color: white;
+  -webkit-text-stroke: 1px blue;
+}
+
+h2{
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.field{
+  width: 30%;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+#user{
+  &_name{
+    height: 40px;
+    width: 100%;
+  }
+  &_email{
+    height: 40px;
+    width: 100%;
+  }
+  &_password{
+    height: 40px;
+    width: 100%;
+  }
+  &_password_confirmation{
+    height: 40px;
+    width: 100%;
+  }
+}
