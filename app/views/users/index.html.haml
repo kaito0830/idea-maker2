@@ -1,0 +1,15 @@
+.user_index
+  =render "ideas/header"
+  .header-search
+    検索
+  .user
+    .user-logo
+      アイデアメーカー
+    -# ideaのブロックでひとかたまりのアイデア
+    -@users.each do |user| 
+      %a(href="/users/#{user.id}")
+        .user__belt
+          .user__belt--name
+            = user.name
+          .user__belt--value
+    %end
