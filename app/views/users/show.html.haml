@@ -1,0 +1,6 @@
+.user-show
+  =render "ideas/header"
+  .user-idea__index
+    -@ideas.each do |idea|
+      = idea.title
+    %end
