@@ -1,6 +1,16 @@
 class IdeasController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
   def index
+    require 'net/http'
+    require 'json'
+
+    @url = 'http://weather.livedoor.com/forecast/webservice/json/v1?city=270000'
+    @uri = URI(@url)
+    @response = Net::HTTP.get(@uri)
+    @output = JSON.parse(@response)
+
+    @city_telop = @output['forecasts'][0]['telop']
+
     @ideas = Idea.all
   end
 

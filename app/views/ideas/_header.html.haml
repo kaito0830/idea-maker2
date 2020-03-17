@@ -2,6 +2,8 @@
   .header--logo
     %a(href="/")
       Idea-Maker
+  .header--weather
+    =@city_telop
   .header--btn
   -if user_signed_in?
     .header--btn--logout
@@ -16,4 +18,3 @@
       = link_to "ログイン", new_user_session_path, class:"btn login"
     .header--btn--new
       = link_to "新規登録" , new_user_registration_path, class:"btn registration"
-      
