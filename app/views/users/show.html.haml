@@ -4,3 +4,10 @@
     -@ideas.each do |idea|
       = idea.title
     %end
+  %h3 いいねしている投稿
+  -@user.liked_ideas.each do |idea|
+   =idea.user.email
+   =idea.content
+  %end
+
+  

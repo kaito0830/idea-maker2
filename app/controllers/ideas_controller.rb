@@ -30,6 +30,7 @@ class IdeasController < ApplicationController
 
   def show
     @idea = Idea.find(params[:id])
+    @like = Like.new
   end
 
   private  

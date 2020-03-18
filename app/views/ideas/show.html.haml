@@ -1,5 +1,7 @@
 .idea-wrapper
   =render "header"
+  .idea-wrapper__logo
+    IDEA INFORMATION
   .idea-wrapper__info
     .idea-wrapper__info--title
       title: 
@@ -7,10 +9,25 @@
     .idea-wrapper__info--name
       name: 
       = @idea.user.name
-    .idea-wrapper__info--price
-      price:$
-      = @idea.price
+    .idea-like
+      %h3
+        =@idea.likes.count
+      -if current_user.already_liked?(@idea)
+        =button_to 'いいねを取り消す', idea_like_path(@idea), method: :delete
+      -else
+        =button_to 'いいね', idea_likes_path(@idea)
+    -# .idea-wrapper__info--price
+    -#   price:$
+    -#   = @idea.price
   .idea-wrapper__box
     .idea-wrapper__box__content
       =@idea.info
   .idea--btn
+
+
+    -# %h2 いいねしたユーザ
+    -# -@idea.liked_users.each do |user|
+    -#   %li
+    -#     =user.name
+    -# %end
+

@@ -4,4 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :ideas
+  has_many :likes, dependent: :destroy
+  has_many :liked_ideas, through: :likes, source: :post
+
+  def already_liked?(idea)
+    self.likes.exists?(idea_id: idea.id)
+  end
 end
