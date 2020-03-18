@@ -1,19 +1,38 @@
+$font-color: white;
+$site-color: rgb(41, 130, 160);
+$body-color: black;
+
 .idea-wrapper{
   height: 100vh;
   width: 100vw;
-  background-image: url(https://images.unsplash.com/photo-1584269408084-df3446157c9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
-  // background-image: url(https://cdn.pixabay.com/photo/2020/03/04/13/04/network-4901588_1280.jpg);
+  font-family: serif;
+  background-image: url(https://images.unsplash.com/photo-1519852476561-ec618b0183ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1938&q=80);
   background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 100px;
+  overflow: scroll;
+  &__logo{
+    color: $font-color;
+    -webkit-text-stroke: 1px $site-color;
+    font-size: calc(18px + 2vw);
+    text-align: center;
+    padding-top: 100px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
   &__info{
-    color: white;
+    color: $body-color;
     font-size: 30px;
+    text-align: center;
+    padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     &--title{
-      margin-left: 20px;
+      margin-bottom: 20px;
     }
     &--name{
-      
+      margin-bottom: 20px;
     }
     &--price{
       margin-right: 20px;
@@ -21,16 +40,22 @@
   }
   &__box{
     height: 70%;
-    width: 97%;
-    border: 1px solid white;
-    background-color: rgba(0, 0, 0, 0.5);
+    width: 50%;
+    background-color: rgba(41, 130, 160, 0.1);
+    border: 1px solid $site-color;
     border-radius: 30px;
     text-align: center;
     margin: 0 auto;
+    padding: 20px;
     &__content{
-      color: white;
+      color: $body-color;
       font-size: 20px;
     }
   }
 }
 
+.idea-like{
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+}

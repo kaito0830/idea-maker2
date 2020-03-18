@@ -1,7 +1,9 @@
 .html
   = render "header"
   .header-search
-    検索
+    Search
+  .body-logo
+    ALL OF IDEAS
   .body
     -# ideaのブロックでひとかたまりのアイデア
     -@ideas.each do |idea|
@@ -22,7 +24,7 @@
           -# idea-infoでユーザ名と値段の情報を持つ
         .idea--info 
           .idea--info--user_name
-            kaito
+            = idea.user.name
           .idea--info--price
             price: $
             = idea.price
