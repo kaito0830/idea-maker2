@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    user = User.find(params[:id])
-    @ideas = user.ideas
+    @user = User.find(params[:id])
+    @ideas = @user.ideas
   end
 end

@@ -4,12 +4,10 @@
     検索
   .user
     .user-logo
-      アイデアメーカー
+      Idea Makers
     -# ideaのブロックでひとかたまりのアイデア
-    -@users.each do |user| 
-      %a(href="/users/#{user.id}")
-        .user__belt
-          .user__belt--name
-            = user.name
-          .user__belt--value
-    %end
+    .user__belt
+      -@users.each do |user| 
+        -# この部分にユーザのアイコン写真を取り入れれるように実装する
+        %a(href="/users/#{user.id}" class="user__belt--name")
+          = user.name
