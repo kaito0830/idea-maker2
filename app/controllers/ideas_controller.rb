@@ -33,6 +33,14 @@ class IdeasController < ApplicationController
     @like = Like.new
   end
 
+  def search
+    @ideas = Idea.search(params[:keyword])
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   private  
   def idea_params
     params.require(:idea).permit(:title, :info, :price).merge(user_id: current_user.id)
