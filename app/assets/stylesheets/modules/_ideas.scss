@@ -8,6 +8,10 @@ $body-color: rgba(0, 0, 0, 0.9);
   box-sizing: border-box;
 }
 
+.wrapper{
+  padding-top: 100px;
+}
+
 .html{
   font-family: serif;
   text-align: center;
@@ -18,9 +22,6 @@ $body-color: rgba(0, 0, 0, 0.9);
 }
 
 .header{
-  position: fixed;
-  top: 0;
-  z-index: 1;
   height: 100px;
   width: 100vw;
   color: $header-color;
@@ -30,6 +31,21 @@ $body-color: rgba(0, 0, 0, 0.9);
   border-bottom: 2px solid rgba(119, 119, 233, 0.7);
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  &__info{
+    display: flex;
+  }
+  &--user{
+    &_name{
+      color: $header-color;
+      -webkit-text-stroke:0.5px $site-color;
+      margin-left: 30px;
+      line-height: 100px;
+      padding-top: 20px;
+    }
+  }
   &--logo{
     line-height: 100px;
     padding-top:10px;
@@ -48,6 +64,10 @@ $body-color: rgba(0, 0, 0, 0.9);
   &--btn{
     line-height: 100px;
     display: flex;
+    &--users{
+      color: $header-color;
+      font-size: larger;
+    }
     &--logout{
       display: flex;
       a{

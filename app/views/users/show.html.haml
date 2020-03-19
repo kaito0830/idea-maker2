@@ -1,13 +1,16 @@
 .user-show
   =render "ideas/header"
-  .user-idea__index
-    -@ideas.each do |idea|
-      = idea.title
-    %end
-  %h3 いいねしている投稿
-  -@user.liked_ideas.each do |idea|
-   =idea.user.email
-   =idea.content
-  %end
-
-  
+  .user-idea
+    %h3.user-idea__index Your Special Ideas!
+    %ul
+      -@ideas.each do |idea|
+        %li
+          %a(href="/ideas/#{idea.id}" class="user-idea__index--each")
+            = idea.title
+      %end
+    %h3.user-idea__likes Ideas You Like!
+    %ul
+      -@user.liked_ideas.each do |idea|
+        %li
+          %a(href="/ideas/#{idea.id}" class="user-idea__like--each")
+            =idea.title
