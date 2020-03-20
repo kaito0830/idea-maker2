@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :ideas, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :liked_ideas, through: :likes, source: :idea
+  has_many :comments
 
   def already_liked?(idea)
     self.likes.exists?(idea_id: idea.id)

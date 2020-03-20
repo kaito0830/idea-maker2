@@ -31,6 +31,8 @@ class IdeasController < ApplicationController
   def show
     @idea = Idea.find(params[:id])
     @like = Like.new
+    @comment = Comment.new
+    @comments = @idea.comments.includes(:user)
   end
 
   def search

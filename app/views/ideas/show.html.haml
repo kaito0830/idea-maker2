@@ -25,12 +25,19 @@
   .idea-wrapper__box
     .idea-wrapper__box__content
       =@idea.info
-  .idea--btn
-
-
-    -# %h2 いいねしたユーザ
-    -# -@idea.liked_users.each do |user|
-    -#   %li
-    -#     =user.name
-    -# %end
-
+  .idea-container
+    %h2 Comments
+    =form_with model: [@idea, @comment], local: true do |form|
+      .idea-container-form
+        =form.text_area :text, placeholder: "exchange your ideas!!", rows: "2"
+        =form.submit "SEND", class:"comment-form-btn"
+    .comments
+      %h4 Comments Index
+      -if @comments
+        -@comments.each do |comment|
+          %p
+            %strong
+              =link_to comment.user.name, "/users/#{comment.user_id}"
+            = comment.text
+      -else
+        %p comment nothing
