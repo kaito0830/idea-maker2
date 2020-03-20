@@ -11,3 +11,8 @@
         %img(src="#{user.image}" class="icon_image")/
         %a(href="/users/#{user.id}" class="user__belt--name")
           = user.name
+    .new-user-logo
+      Ranking
+      .new-user-index
+        -@all_ranks.each do |user|
+          =user.name

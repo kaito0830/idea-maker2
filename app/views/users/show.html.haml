@@ -1,5 +1,9 @@
 .user-show
   =render "ideas/header"
+  .user-info
+    =@user.name
+  .user-follow
+    =render 'relationships/follow_button', user: @user
   .user-idea
     %h3.user-idea__index Your Special Ideas!
     %ul
@@ -14,3 +18,9 @@
         %li
           %a(href="/ideas/#{idea.id}" class="user-idea__like--each")
             =idea.title
+    フォロー中
+    -@user.followings.each do |user|
+      = user.name
+    フォロワー
+    -@user.followers.where.not(id: current_user.id).each do |user|
+      = user.name
