@@ -68,3 +68,46 @@ $body-color: black;
     }
   }
 }
+
+.idea-container{
+  width: 100vw;
+  margin-top: 100px;
+  h2{
+    margin-bottom: 50px;
+  }
+  form{
+    padding-bottom: 10px;
+  }
+  textarea{
+    width: 45%;
+  }
+}
+
+.idea-container-form{
+  display: flex;
+  justify-content: center;
+}
+
+.comment-form-btn{
+  font-size: 25px;
+  color: $font-color;
+  -webkit-text-stroke:1px $site-color;
+  background-color: rgba(0, 0, 0, 0);
+  padding:15px;
+  margin-left: 20px;
+  border: none;
+  outline: none;
+  &:hover{
+    background-color: rgba(41, 130, 160, 0.3);
+  }
+}
+
+.comments{
+  text-align: center;
+  h4{
+    color: $font-color;
+    -webkit-text-stroke:0.5px $site-color;
+    font-size: 20px;
+    margin-top:50px;
+  }
+}
