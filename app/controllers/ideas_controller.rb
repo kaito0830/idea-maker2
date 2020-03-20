@@ -12,6 +12,7 @@ class IdeasController < ApplicationController
     @city_telop = @output['forecasts'][0]['telop']
 
     @ideas = Idea.all
+    @all_ranks = Idea.find(Like.group(:idea_id).order('count(idea_id) desc').limit(3).pluck(:idea_id))
   end
 
   def new

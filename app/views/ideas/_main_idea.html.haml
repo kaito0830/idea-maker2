@@ -32,3 +32,7 @@
               price: $
               = idea.price
       %end
+  
+  .body-ranking
+    -@all_ranks.each do |idea|
+      = idea.title
