@@ -8,6 +8,6 @@
     -# ideaのブロックでひとかたまりのアイデア
     .user__belt
       -@users.each do |user| 
-        -# この部分にユーザのアイコン写真を取り入れれるように実装する
+        %img(src="#{user.image}" class="icon_image")/
         %a(href="/users/#{user.id}" class="user__belt--name")
           = user.name
