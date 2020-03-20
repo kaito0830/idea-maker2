@@ -10,4 +10,6 @@ class User < ApplicationRecord
   def already_liked?(idea)
     self.likes.exists?(idea_id: idea.id)
   end
+
+  mount_uploader :image, ImageUploader
 end
