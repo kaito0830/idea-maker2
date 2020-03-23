@@ -19,7 +19,7 @@ $form-color:  rgba(0, 0, 0, 0.5);
   margin: 0 auto;
   &--logo{
     color:white;
-    font-size: calc(18px + 3vw);
+    font-size: calc(10px + 2vw + 2vh);
     padding-top: 100px;
     margin-top: 100px;
     margin-bottom: 50px;
@@ -49,6 +49,9 @@ $form-color:  rgba(0, 0, 0, 0.5);
     border: 1px solid $site-color;
     border-radius: 20px;
     padding: 20px;
+    &::placeholder{
+      font-size: calc(5px + 0.7vh + 0.7vw);
+    }
   }
   &--price{
     color: $font-color;
@@ -65,13 +68,15 @@ $form-color:  rgba(0, 0, 0, 0.5);
   }
 
   &--btn{
-    display: block;
-    padding: 20px 200px;
-    margin-bottom: 100px;
+    font-size: calc(5px + 0.5vh + 0.5vw);
+    color: white;
+    -webkit-text-stroke:calc(0.1px + 0.01vh + 0.015vw) $site-color;
+    outline: none;
     background-color:$site-color;
     border-radius: 50px;
-    color: white;
-    outline: none;
+    display: block;
+    padding: calc(10px + 0.5vh + 0.5vw) calc(50px + 3vh + 3vw);
+    margin-bottom: 100px;
   }
 }
 

@@ -1,15 +1,15 @@
 .user_index
   =render "ideas/header"
   .header-search
-    検索
+    Search
   .user
     .user-logo
       Idea Makers
     -# ideaのブロックでひとかたまりのアイデア
     .user__belt
       -@users.each do |user| 
-        %img(src="#{user.image}" class="icon_image")/
-        %a(href="/users/#{user.id}" class="user__belt--name")
+        %a(href="/users/#{user.id}" class="user__belt--info")
+          %img(src="#{user.image}" class="icon_image")/
           = user.name
     .new-user-logo
       Ranking

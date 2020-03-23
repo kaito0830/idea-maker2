@@ -7,7 +7,7 @@
   .user-idea
     %h3.user-idea__index Your Special Ideas!
     %ul
-      -@ideas.each do |idea|
+      -@ideas.reverse_each do |idea|
         %li
           %a(href="/ideas/#{idea.id}" class="user-idea__index--each")
             = idea.title
@@ -16,7 +16,7 @@
     %ul
       -@user.liked_ideas.each do |idea|
         %li
-          %a(href="/ideas/#{idea.id}" class="user-idea__like--each")
+          %a(href="/ideas/#{idea.id}" class="user-idea__likes--each")
             =idea.title
     フォロー中
     -@user.followings.each do |user|

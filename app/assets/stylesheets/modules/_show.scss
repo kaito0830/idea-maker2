@@ -72,6 +72,7 @@ $body-color: black;
 .idea-container{
   width: 100vw;
   margin-top: 100px;
+  font-family: fantasy;
   h2{
     margin-bottom: 50px;
   }
@@ -80,6 +81,11 @@ $body-color: black;
   }
   textarea{
     width: 45%;
+    font-family: serif;
+    border: 1px solid $site-color;
+    border-radius: 15px;
+    padding: 10px;
+    outline: none;
   }
 }
 
@@ -103,11 +109,17 @@ $body-color: black;
 }
 
 .comments{
+  
   text-align: center;
   h4{
     color: $font-color;
     -webkit-text-stroke:0.5px $site-color;
     font-size: 20px;
     margin-top:50px;
+  }
+  a{
+    color: $font-color;
+    -webkit-text-stroke: 0.3px $site-color;
+    text-decoration: none;
   }
 }

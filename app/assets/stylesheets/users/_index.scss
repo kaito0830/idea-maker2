@@ -1,5 +1,14 @@
 $site-color: rgb(41, 130, 160);
 $font-color: black;
+$height-user-info:calc(30px + 10vh);
+
+*{
+  box-sizing: border-box;
+}
+
+.header-search{
+  text-align: center;
+}
 .user_index{
   height: 100vh;
   width: 100vw;
@@ -15,7 +24,7 @@ $font-color: black;
   &-logo{
     color: white;
     -webkit-text-stroke: 1px $site-color;
-    font-size: 70px;
+    font-size: calc(30px + 2vh + 2vw);
     text-align: center;
 
   }
@@ -23,27 +32,28 @@ $font-color: black;
   a{
     text-decoration: none;
     color: $font-color;
-    font-size: 30px;
+    font-size: calc(10px + 1vh + 1vw);
     font-weight: 100;
+    img{
+      width: 50px;
+      height: calc(20px + 1vh + 1vw);
+      //サイズ指定
+      border-radius: 100px;
+      //画像を丸くする
+      object-fit: cover;
+      //タテヨコ比を変えないままトリミング
+      line-height: calc(30px + 10vh);
+    }
   }
   &__belt{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    &--name{
+    &--info{
+      height: calc(30px + 10vh);
       width: 30%;
       border: 1px solid $site-color;
       margin-top: 50px;
     }
   }
-}
-
-.icon_image {
-  width: 50px;
-  height: 50px;
-  //サイズ指定
-  border-radius: 100px;
-  //画像を丸くする
-  object-fit: cover;
-  //タテヨコ比を変えないままトリミング
 }
