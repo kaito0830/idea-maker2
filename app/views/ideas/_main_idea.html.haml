@@ -9,7 +9,7 @@
   .body
     -# ideaのブロックでひとかたまりのアイデア
     .ideas
-      -@ideas.each do |idea|
+      -@ideas.reverse_each do |idea|
         -if user_signed_in? 
           %a(href="/ideas/#{idea.id}" class="idea")
             .idea--title
