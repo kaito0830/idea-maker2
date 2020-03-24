@@ -11,7 +11,7 @@ $body-color: rgba(0, 0, 0, 0.9);
 .wrapper{
   height: 100vh;
   width: 100vw;
-  padding-top: 100px;
+  padding-top: calc(50px + 5vh);
 }
 
 .html{
@@ -24,7 +24,7 @@ $body-color: rgba(0, 0, 0, 0.9);
 }
 
 .header{
-  height: 100px;
+  height: calc(50px + 5vh);
   width: 100vw;
   color: $header-color;
   font-family:Meiryo;
@@ -45,12 +45,12 @@ $body-color: rgba(0, 0, 0, 0.9);
       color: $header-color;
       -webkit-text-stroke:0.5px $site-color;
       margin-left: 30px;
-      line-height: 100px;
+      line-height: calc(50px + 5vh);
       padding-top: 20px;
     }
   }
   &--logo{
-    line-height: 120px;
+    line-height: calc(50px + 10vh);
     a{
       color: white;
       -webkit-text-stroke: calc(0.1px + 0.05vw) $site-color;
@@ -63,7 +63,7 @@ $body-color: rgba(0, 0, 0, 0.9);
     color: $header-color;
   }
   &--btn{
-    line-height: 100px;
+    line-height: calc(50px + 5vh);
     display: flex;
     &--users{
       color: $header-color;
