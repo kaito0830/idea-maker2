@@ -9,19 +9,11 @@
     .idea-wrapper__info--name
       name: 
       = @idea.user.name
-    .idea-like
+    .idea-like#like-link{ id: @idea.id }
       Like: 
       %h3
         =@idea.likes.count
-      -if current_user.already_liked?(@idea)
-        =link_to idea_like_path(@idea.id), method: :delete do
-          =icon("fas", "heart")
-      -else
-        =link_to idea_likes_path(@idea.id) ,method: :post do
-          =icon("far", "heart")
-    -# .idea-wrapper__info--price
-    -#   price:$
-    -#   = @idea.price
+      =render 'likes/like', collection: @ideas, as: :idea
   .idea-wrapper__box
     .idea-wrapper__box__content
       =@idea.info

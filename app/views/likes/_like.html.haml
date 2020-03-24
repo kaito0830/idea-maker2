@@ -1,0 +1,6 @@
+-if current_user.already_liked?(@idea)
+  =link_to idea_like_path(@idea.id), method: :delete, remote: true do
+    =icon("fas", "heart")
+-else
+  =link_to idea_likes_path(@idea.id) ,method: :post, remote: true do
+    =icon("far", "heart")
