@@ -1,7 +1,10 @@
 class CommentsController < ApplicationController
   def create
-    comment = Comment.create(comment_params)
-    redirect_to "/ideas/#{comment.idea.id}"
+    @comment = Comment.new(comment_params)
+    @comments = Comment.all
+    if @comment.save
+      @comment = Comment.new
+    end
   end
 
   private
