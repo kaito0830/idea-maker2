@@ -1,0 +1,7 @@
+%h4 Comments Index
+-if @comments
+  -@comments.each do |comment|
+    %p
+      %strong
+        =link_to comment.user.name, "/users/#{comment.user_id}"
+      = comment.text

@@ -27,7 +27,6 @@ $body-color: rgba(0, 0, 0, 0.9);
   height: calc(50px + 5vh);
   width: 100vw;
   color: $header-color;
-  font-family:Meiryo;
   font-weight: 100;
   background-color: rgb(41, 130, 160);
   border-bottom: 2px solid rgba(119, 119, 233, 0.7);
@@ -219,4 +218,16 @@ $body-color: rgba(0, 0, 0, 0.9);
 
 .body-ranking{
   color: $header-color;
+}
+
+.google-maps{
+  margin: 0 auto;
+  height: 300px;
+  width: 300px;
+}
+
+#map{
+  margin-top: 100px;
+  height: 100%;
+  width: 100%;
 }
