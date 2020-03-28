@@ -1,5 +1,5 @@
 class IdeasController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  # before_action :move_to_index, except: [:index, :show]
   def index
     require 'net/http'
     require 'json'
@@ -8,7 +8,7 @@ class IdeasController < ApplicationController
     @uri = URI(@url)
     @response = Net::HTTP.get(@uri)
     @output = JSON.parse(@response)
-
+    
     @city_telop = @output['forecasts'][0]['telop']
 
     @ideas = Idea.all
