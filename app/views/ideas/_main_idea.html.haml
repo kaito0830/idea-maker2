@@ -10,18 +10,8 @@
     -# ideaのブロックでひとかたまりのアイデア
     .ideas
       -@ideas.reverse_each do |idea|
-        -if user_signed_in? 
-          %a(href="/ideas/#{idea.id}" class="idea")
-            .idea--title
-              = idea.title
-              -# idea-infoでユーザ名と値段の情報を持つ
-            .idea--info 
-              .idea--info--user_name
-                = idea.user.name
-              .idea--info--price
-                price: $
-                = idea.price
-        -else
+        -# -if user_signed_in? 
+        %a(href="/ideas/#{idea.id}" class="idea")
           .idea--title
             = idea.title
             -# idea-infoでユーザ名と値段の情報を持つ
@@ -31,11 +21,24 @@
             .idea--info--price
               price: $
               = idea.price
+        -# -else
+        -#   .idea--title
+        -#     = idea.title
+        -#     -# idea-infoでユーザ名と値段の情報を持つ
+        -#   .idea--info 
+        -#     .idea--info--user_name
+        -#       = idea.user.name
+        -#     .idea--info--price
+        -#       price: $
+        -#       = idea.price
       %end
-  
+
+
     .body-ranking
-      -@all_ranks.each do |idea|
-        = idea.title
+      Now the hottest Idea!
+      .body-ranking-ideas
+        -@all_ranks.each do |idea|
+          = idea.title
 
     .google-maps
       会社位置
